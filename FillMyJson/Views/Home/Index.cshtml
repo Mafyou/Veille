@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Getting Started with Vue.js in .NET Core</h1>
+
+<div id="form" class="container">
+    <p>
+        <label for="fullName">Full Name</label>
+        <input id="fullName" type="text" placeholder="Enter your full name" v-model="FullName" class="form-control" />
+    </p>
+
+    <p>
+        <label for="email">Email</label>
+        <input id="email" type="text" placeholder="Enter your email" v-model="Email" class="form-control" />
+    </p>
+
+    <p>
+        <label for="comments">Comments</label>
+        <textarea id="comments" rows="10" placeholder="Enter some positive comments" v-model="Comments" class="form-control"></textarea>
+    </p>
+
+    <div id="form-buttons">
+        <button type="button" class="danger" v-on:click="ResetJson">Reset users</button>
+        <button type="button" class="success" ref="SubmitButton" v-on:click="SubmitForm">Submit Form</button>
+    </div>
+</div>
+<div id="userList">
+
+</div>
+<div id="demo">
+    <button v-on:click="updateMessage">Update moi</button>
+</div>
